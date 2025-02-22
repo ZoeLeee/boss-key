@@ -1,6 +1,6 @@
 import { Command, DEFAULT_TARGET_SITE, getData, StorageKey } from "~utils"
 
-let oldTabs: chrome.tabs.Tab[] = []
+let oldTabUrls: string[] = []
 
 let fakeTab: chrome.tabs.Tab
 
@@ -10,24 +10,25 @@ chrome.runtime.onMessage.addListener(
     const targetSite = (await getData(StorageKey.TARGET_SITE)) as string
 
     if (request.type === Command.Toggle) {
-      if (oldTabs?.length) {
-        for (let tab of oldTabs) {
-          chrome.tabs.create({ url: tab.url })
+      if (oldTabUrls?.length) {
+        for (let tab of oldTabUrls) {
+          chrome.tabs.create({ url: tab })
         }
 
         if (fakeTab) {
           chrome.tabs.remove(fakeTab.id)
           fakeTab = null
         }
-        oldTabs = null
+        oldTabUrls = null
       } else {
         chrome.tabs.query({}, (tabs) => {
           chrome.tabs
             .create({ url: targetSite || DEFAULT_TARGET_SITE })
             .then((tab) => {
               fakeTab = tab
+              tab.active = true
             })
-          oldTabs = tabs.filter((tab) => !!tab.url)
+          oldTabUrls = tabs.filter((tab) => !!tab.url).map((tab) => tab.url)
           for (let tab of tabs) {
             chrome.tabs.remove(tab.id)
           }
