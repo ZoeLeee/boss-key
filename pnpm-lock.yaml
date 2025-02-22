@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      is-hotkey:
+        specifier: ^0.2.0
+        version: 0.2.0
       plasmo:
         specifier: 0.90.3
         version: 0.90.3(@swc/core@1.10.17(@swc/helpers@0.5.15))(@swc/helpers@0.5.15)(@types/node@20.11.5)(postcss@8.5.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -24,6 +27,12 @@ importers:
       '@types/chrome':
         specifier: 0.0.258
         version: 0.0.258
+      '@types/dom-speech-recognition':
+        specifier: ^0.0.4
+        version: 0.0.4
+      '@types/is-hotkey':
+        specifier: ^0.1.10
+        version: 0.1.10
       '@types/node':
         specifier: 20.11.5
         version: 20.11.5
@@ -1559,6 +1568,9 @@ packages:
   '@types/chrome@0.0.258':
     resolution: {integrity: sha512-vicJi6cg2zaFuLmLY7laG6PHBknjKFusPYlaKQ9Zlycskofy71rStlGvW07MUuqUIVorZf8k5KH+zeTTGcH2dQ==}
 
+  '@types/dom-speech-recognition@0.0.4':
+    resolution: {integrity: sha512-zf2GwV/G6TdaLwpLDcGTIkHnXf8JEf/viMux+khqKQKDa8/8BAUtXXZS563GnvJ4Fg0PBLGAaFf2GekEVSZ6GQ==}
+
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
@@ -1573,6 +1585,9 @@ packages:
 
   '@types/http-cache-semantics@4.0.4':
     resolution: {integrity: sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==}
+
+  '@types/is-hotkey@0.1.10':
+    resolution: {integrity: sha512-RvC8KMw5BCac1NvRRyaHgMMEtBaZ6wh0pyPTBu7izn4Sj/AX9Y4aXU5c7rX8PnM/knsuUpC1IeoBkANtxBypsQ==}
 
   '@types/node@20.11.5':
     resolution: {integrity: sha512-g557vgQjUUfN76MZAN/dt1z3dzcUsimuysco0KeluHgrPdJXkP/XdAURgyO2W9fZWHRtRBiVKzKn8vyOAwlG+w==}
@@ -2201,6 +2216,9 @@ packages:
   is-glob@4.0.3:
     resolution: {integrity: sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==}
     engines: {node: '>=0.10.0'}
+
+  is-hotkey@0.2.0:
+    resolution: {integrity: sha512-UknnZK4RakDmTgz4PI1wIph5yxSs/mvChWs9ifnlXsKuXgWmOkY/hAE0H/k2MIqH0RlRye0i1oC07MCRSD28Mw==}
 
   is-json@2.0.1:
     resolution: {integrity: sha512-6BEnpVn1rcf3ngfmViLM6vjUjGErbdrL4rwlv+u1NO1XO8kqT4YGL8+19Q+Z/bas8tY90BTWMk2+fW1g6hQjbA==}
@@ -4870,6 +4888,8 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
+  '@types/dom-speech-recognition@0.0.4': {}
+
   '@types/estree@1.0.6': {}
 
   '@types/filesystem@0.0.36':
@@ -4881,6 +4901,8 @@ snapshots:
   '@types/har-format@1.2.16': {}
 
   '@types/http-cache-semantics@4.0.4': {}
+
+  '@types/is-hotkey@0.1.10': {}
 
   '@types/node@20.11.5':
     dependencies:
@@ -5529,6 +5551,8 @@ snapshots:
   is-glob@4.0.3:
     dependencies:
       is-extglob: 2.1.1
+
+  is-hotkey@0.2.0: {}
 
   is-json@2.0.1: {}
 

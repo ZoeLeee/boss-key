@@ -9,6 +9,7 @@
     "./**/*.tsx"
   ],
   "compilerOptions": {
+    "lib":["dom","esnext"],
     "paths": {
       "~*": [
         "./*"

@@ -10,6 +10,7 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "is-hotkey": "^0.2.0",
     "plasmo": "0.90.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -17,6 +18,8 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.1.1",
     "@types/chrome": "0.0.258",
+    "@types/dom-speech-recognition": "^0.0.4",
+    "@types/is-hotkey": "^0.1.10",
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
@@ -24,8 +27,13 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    "name": "Boss Key",
+    "description": "一键隐藏浏览器的标签页",
     "host_permissions": [
       "https://*/*"
+    ],
+    "permissions": [
+      "storage"
     ]
   }
 }
