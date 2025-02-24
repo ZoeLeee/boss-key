@@ -1,7 +1,7 @@
 {
   "name": "audio-translator",
   "displayName": "Audio translator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Translate the audio",
   "author": "zoelee0904@gmail.com",
   "scripts": {

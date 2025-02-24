@@ -69,7 +69,7 @@ function IndexPopup() {
       style={{
         padding: 16
       }}>
-      目标网站: <input value={site} onChange={handleChange} />
+      目标网站: <input value={site} onChange={handleChange} onKeyDown={e=>e.stopPropagation()} />
       快捷键(双击编辑):{" "}
       <input value={edit ? "输入快捷键" : shortKey.join("+")} onDoubleClick={() => setEdit(true)} />
     </div>
